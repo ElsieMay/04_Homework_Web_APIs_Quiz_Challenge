@@ -1,22 +1,56 @@
+* {
+	--Mauve: #46092c;
+	--Citrus: #f5fd7b;
+	--LightMauve: #b35ba4;
+	background-color: var(--Mauve);
+}
+
+body {
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
 h1 {
 	text-align: center;
+	color: var(--Citrus);
 }
 
 h2 {
 	text-align: center;
+	color: var(--Citrus);
 }
 
-.card-footer {
+.card {
 	display: flex;
 	justify-content: center;
+	flex-flow: column;
+	align-items: center;
+}
+
+.card #start {
+	max-width: 120px;
+}
+
+.cardHeader {
+	display: flex;
+	justify-content: center;
+}
+.card-footer {
+	display: flex;
+	flex-flow: column;
+	max-width: 20%;
+	align-items: center;
+	margin: auto;
+}
+#userName {
+	background-color: var(--Citrus);
+	height: 30px;
 }
 
 .btn {
 	border: none;
-	background-color: hsl(360, 91%, 36%);
+	background-color: var(--LightMauve);
 	border-radius: 25px;
-	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
-	color: hsl(0, 0%, 100%);
+	color: black;
 	display: flex;
 	font-size: 22px;
 	line-height: 22px;
@@ -24,9 +58,36 @@ h2 {
 	padding: 14px 34px;
 	text-align: center;
 	cursor: pointer;
+	box-shadow: 5px 10px 20px rgb(125, 1, 81) inset;
+}
+
+#start {
+	border: none;
+	background-color: var(--LightMauve);
+	border-radius: 25px;
+	color: black;
+	font-size: 22px;
+	line-height: 22px;
+	margin: 16px 16px 16px 20px;
+	padding: 14px 34px;
+	text-align: center;
+	cursor: pointer;
+	box-shadow: 5px 10px 20px rgb(125, 1, 81) inset;
 }
 
 .questionSelections {
+	display: flex;
+	justify-content: center;
+}
+
+.timeProperties {
+	background-color: var(--Citrus);
+	color: var(--Mauve);
+	max-width: 10%;
+	padding: 10px;
+}
+
+.timer-count {
 	display: flex;
 	justify-content: center;
 }

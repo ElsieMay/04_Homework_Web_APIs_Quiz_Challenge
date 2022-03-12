@@ -9,34 +9,40 @@
 	</head>
 	<body>
 		<!--This is the body/main container content-->
-		<div class="wrapper">
+		<section class="wrapper">
 			<header>
 				<!--This is the container description/title-->
 				<h1>Coding Quiz Challenge</h1>
 			</header>
 			<div class="card">
 				<!--This is the card div-->
-				<div class="card-header">
-					<!--This is the body font-->
-					<h2>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalise your score by ten seconds!</h2>
-				</div>
-				<div class="card-footer">
-					<!--This is the button for the card-->
-					<button onclick="Start()" class="btn">Start Quiz</button>
-				</div>
-			</div>
-		</div>
+				<article>
+					<h2 id="headerText">What is your name?</h2>
+				</article>
 
-		<div class="questionOne">
+				<div class="card-footer" class id="greetingInput">
+					<input id="userName" />
+					<button onclick="greeting()" class="btn">Submit</button>
+					<div class="cardHeader">
+						<!--This is the body font-->
+						<h2>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalise your score by ten seconds!</h2>
+					</div>
+				</div>
+				<button id="start">Start</button>
+			</div>
+		</section>
+
+		<div id="questionOne">
 			<h1>Question One</h1>
 			<h2 id="Question">Commonly used data types do not include...</h2>
 			<div class="questionSelections">
-				<button onclick="q1Btn()" class="btn">Strings</button>
-				<button onclick="q1Btn()" class="btn">Booleans</button>
-				<button onclick="q1Btn()" class="btn">Alerts</button>
-				<button onclick="q1Btn()" class="btn">Numbers</button>
+				<button id="strA" class="btn">Strings</button>
+				<button id="booA" class="btn">Booleans</button>
+				<button id="alrA" class="btn">Alerts</button>
+				<button id="numA" class="btn">Numbers</button>
 			</div>
 		</div>
+		<div class="timer-count"><h1 class="timeProperties">60</h1></div>
 		<script src="assets/script.js"></script>
 	</body>
 </html>

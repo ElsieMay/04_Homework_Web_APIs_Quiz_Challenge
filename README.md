@@ -43,14 +43,7 @@ I was aided by the BCS Learning assistant. They instructed me well.
 
 I followed these links for tutorials and additional information;
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript
-https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
-https://www.youtube.com/watch?v=PkZNo7MFNFg&t=5142s
-https://www.w3schools.com/js/js_operators.asp
-https://www.w3schools.com/js/js_arrays.asp
-https://www.codegrepper.com/code-examples/javascript/javascript+if+not
-https://www.tutorialspoint.com/cprogramming/c_do_while_loop.htm
-https://www.tutorialspoint.com/Generating-password-in-Java
+https://www.youtube.com/watch?v=79WRPIknVHs
 
 ## License
 
