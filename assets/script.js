@@ -11,10 +11,12 @@ var timerCount;
 var correctCounter = 0;
 var loseCounter = 0;
 var isWin = false;
-let strings = document.querySelector("#strA");
-let booleans = document.querySelector("#booA");
-let alerts = document.querySelector("#alrA");
-let numbers = document.querySelector("#numA");
+let strA = document.querySelector("#strA");
+let booA = document.querySelector("#booA");
+let alrA = document.querySelector("#alrA");
+let numA = document.querySelector("#numA");
+let qnChoice = "";
+let score = 0;
 
 questionOne.style.display = "none";
 startBtn.style.display = "none";
@@ -63,3 +65,32 @@ function startTimer() {
 }
 
 startBtn.addEventListener("click", startGame);
+
+function sFunction() {
+	qnChoice = "s";
+	if ((sFunction = "s")) {
+		score = score;
+	}
+	console.log(score);
+}
+function bFunction() {
+	qnChoice = "b";
+	if ((sFunction = "b")) {
+		score = score;
+	}
+	console.log(score);
+}
+function aFunction() {
+	qnChoice = "a";
+	if ((sFunction = "s")) {
+		score += 20;
+	}
+	console.log(score);
+}
+function nFunction() {
+	qnChoice = "n";
+	if ((sFunction = "n")) {
+		score = score;
+	}
+	console.log(score);
+}
