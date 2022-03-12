@@ -25,3 +25,8 @@ h2 {
 	text-align: center;
 	cursor: pointer;
 }
+
+.questionSelections {
+	display: flex;
+	justify-content: center;
+}
