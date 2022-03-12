@@ -10,6 +10,7 @@ var timerElement = document.querySelector(".timer-count");
 var timerCount;
 var winCounter;
 var loseCounter;
+var isWin;
 
 questionOne.style.display = "none";
 startBtn.style.display = "none";
@@ -23,14 +24,37 @@ function greeting() {
 }
 
 function startGame() {
-	timerCount = 60;
-	timer;
-	startTimer();
 	startBtn.style.display = "none";
 	headerText.style.display = "none";
 	questionOne.style.display = "block";
+	timerElement.style.display = "block";
+	timerCount = 60;
+	timerElement.textContent = timerCount;
+	startTimer();
 }
 
-function startTimer() {}
+function winGame() {
+	console.log("You won");
+}
+
+function loseGame() {
+	console.log("You Lost");
+}
+
+function startTimer() {
+	var timer = setInterval(function () {
+		timerCount--;
+		timerElement.textContent = timerCount;
+		if (timerCount > 0) {
+			if (isWin) {
+				winGame();
+			}
+		}
+		if (timerCount === 0) {
+			clearInterval(timer);
+			loseGame();
+		}
+	}, 1000);
+}
 
 startBtn.addEventListener("click", startGame);
