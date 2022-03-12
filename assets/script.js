@@ -4,6 +4,10 @@ let headerText = document.querySelector("#headerText");
 let greetingInput = document.querySelector("#greetingInput");
 let startBtn = document.querySelector("#start");
 let questionOne = document.querySelector("#questionOne");
+let questionTwo = document.querySelector("#questionTwo");
+let questionThree = document.querySelector("#questionThree");
+let questionFour = document.querySelector("#questionFour");
+let questionFive = document.querySelector("#questionFive");
 var win = document.querySelector(".win");
 var lose = document.querySelector(".lose");
 var timerElement = document.querySelector(".timer-count");
@@ -17,12 +21,14 @@ var alrA = document.querySelector("#alrA");
 var numA = document.querySelector("#numA");
 let qnChoice = "";
 let score = 0;
-let resultCorrect = "Correct";
-let resultIncorrect = "Incorrect";
 
 questionOne.style.display = "none";
 startBtn.style.display = "none";
 timerElement.style.display = "none";
+questionTwo.style.display = "none";
+questionThree.style.display = "none";
+questionFour.style.display = "none";
+questionFive.style.display = "none";
 
 function greeting() {
 	headerText.innerHTML = "";
