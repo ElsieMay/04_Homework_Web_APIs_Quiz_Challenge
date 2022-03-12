@@ -8,9 +8,13 @@ var win = document.querySelector(".win");
 var lose = document.querySelector(".lose");
 var timerElement = document.querySelector(".timer-count");
 var timerCount;
-var winCounter;
-var loseCounter;
-var isWin;
+var correctCounter = 0;
+var loseCounter = 0;
+var isWin = false;
+let strings = document.querySelector("#strA");
+let booleans = document.querySelector("#booA");
+let alerts = document.querySelector("#alrA");
+let numbers = document.querySelector("#numA");
 
 questionOne.style.display = "none";
 startBtn.style.display = "none";
@@ -35,6 +39,7 @@ function startGame() {
 
 function winGame() {
 	console.log("You won");
+	correctCounter + 20;
 }
 
 function loseGame() {
