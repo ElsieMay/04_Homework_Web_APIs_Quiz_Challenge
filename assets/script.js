@@ -11,12 +11,14 @@ var timerCount;
 var correctCounter = 0;
 var loseCounter = 0;
 var isWin = false;
-let strA = document.querySelector("#strA");
-let booA = document.querySelector("#booA");
-let alrA = document.querySelector("#alrA");
-let numA = document.querySelector("#numA");
+var strA = document.querySelector("#strA");
+var booA = document.querySelector("#booA");
+var alrA = document.querySelector("#alrA");
+var numA = document.querySelector("#numA");
 let qnChoice = "";
 let score = 0;
+let resultCorrect = "Correct";
+let resultIncorrect = "Incorrect";
 
 questionOne.style.display = "none";
 startBtn.style.display = "none";
@@ -71,26 +73,26 @@ function sFunction() {
 	if ((sFunction = "s")) {
 		score = score;
 	}
-	console.log(score);
+	alert("Incorrect");
 }
 function bFunction() {
 	qnChoice = "b";
-	if ((sFunction = "b")) {
+	if ((bFunction = "b")) {
 		score = score;
 	}
-	console.log(score);
+	alert("Incorrect");
 }
 function aFunction() {
 	qnChoice = "a";
-	if ((sFunction = "s")) {
+	if ((aFunction = "s")) {
 		score += 20;
 	}
-	console.log(score);
+	alert("Correct");
 }
 function nFunction() {
 	qnChoice = "n";
-	if ((sFunction = "n")) {
+	if ((nFunction = "n")) {
 		score = score;
 	}
-	console.log(score);
+	alert("Incorrect");
 }
