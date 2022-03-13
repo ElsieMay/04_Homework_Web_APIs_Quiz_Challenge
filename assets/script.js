@@ -71,7 +71,8 @@ function startTimer() {
 		timerCount--;
 		timerElement.textContent = timerCount;
 		if (timerCount > 0) {
-			if (isWin) {}
+			if (isWin) {
+				winGame();
 			}
 		}
 		if (timerCount === 0) {
@@ -88,6 +89,7 @@ function sFunction() {
 		score = score;
 	}
 	alert("Incorrect");
+	timerCount = timerCount - 10;
 	questionOne.style.display = "none";
 	questionTwo.style.display = "block";
 }
@@ -97,6 +99,7 @@ function bFunction() {
 		score = score;
 	}
 	alert("Incorrect");
+	timerCount = timerCount - 10;
 	questionOne.style.display = "none";
 	questionTwo.style.display = "block";
 }
@@ -115,6 +118,7 @@ function nFunction() {
 		score = score;
 	}
 	alert("Incorrect");
+	timerCount = timerCount - 10;
 	questionOne.style.display = "none";
 	questionTwo.style.display = "block";
 }
@@ -125,6 +129,7 @@ function qFunction() {
 		score = score;
 	}
 	alert("Incorrect");
+	timerCount = timerCount - 10;
 	questionTwo.style.display = "none";
 	questionThree.style.display = "block";
 }
@@ -134,6 +139,7 @@ function cbFunction() {
 		score = score;
 	}
 	alert("Incorrect");
+	timerCount = timerCount - 10;
 	questionTwo.style.display = "none";
 	questionThree.style.display = "block";
 }
@@ -152,6 +158,7 @@ function sqFunction() {
 		score = score;
 	}
 	alert("Incorrect");
+	timerCount = timerCount - 10;
 	questionTwo.style.display = "none";
 	questionThree.style.display = "block";
 }
@@ -161,6 +168,7 @@ function jFunction() {
 		score = score;
 	}
 	alert("Incorrect");
+	timerCount = timerCount - 10;
 	questionThree.style.display = "none";
 	questionFour.style.display = "block";
 }
@@ -170,6 +178,7 @@ function tFunction() {
 		score = score;
 	}
 	alert("Incorrect");
+	timerCount = timerCount - 10;
 	questionThree.style.display = "none";
 	questionFour.style.display = "block";
 }
@@ -179,6 +188,7 @@ function flFunction() {
 		score = score;
 	}
 	alert("Incorrect");
+	timerCount = timerCount - 10;
 	questionThree.style.display = "none";
 	questionFour.style.display = "block";
 }
@@ -197,6 +207,7 @@ function nsFunction() {
 		score = score;
 	}
 	alert("Incorrect");
+	timerCount = timerCount - 10;
 	questionFour.style.display = "none";
 	questionFive.style.display = "block";
 }
@@ -206,6 +217,7 @@ function oaFunction() {
 		score = score;
 	}
 	alert("Incorrect");
+	timerCount = timerCount - 10;
 	questionFour.style.display = "none";
 	questionFive.style.display = "block";
 }
@@ -215,6 +227,7 @@ function blFunction() {
 		score = score;
 	}
 	alert("Incorrect");
+	timerCount = timerCount - 10;
 	questionFour.style.display = "none";
 	questionFive.style.display = "block";
 }
@@ -233,6 +246,7 @@ function coFunction() {
 		score = score;
 	}
 	alert("Incorrect");
+	timerCount = timerCount - 10;
 	questionFive.style.display = "none";
 	results.style.display = "block";
 }
@@ -242,6 +256,7 @@ function cuFunction() {
 		score = score;
 	}
 	alert("Incorrect");
+	timerCount = timerCount - 10;
 	questionFive.style.display = "none";
 	results.style.display = "block";
 }
@@ -260,11 +275,7 @@ function paFunction() {
 		score = score;
 	}
 	alert("Incorrect");
+	timerCount = timerCount - 10;
 	questionFive.style.display = "none";
 	results.style.display = "block";
-	scoreN.style.display = "block";
-	document.write(score);
 }
-
-localStorage.setItem("score", JSON.stringify([]));
-console.log(JSON.parse(localStorage.getItem("score")));
