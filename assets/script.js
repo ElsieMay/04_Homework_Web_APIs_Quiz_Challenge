@@ -38,7 +38,6 @@ var conA = document.querySelector("#paraA");
 var scoreN = document.querySelector("scoreN");
 var finalScore = document.querySelector("#finalScore");
 var timeOut = document.querySelector("#timeOut");
-
 let qnChoice = "";
 let score = 0;
 
