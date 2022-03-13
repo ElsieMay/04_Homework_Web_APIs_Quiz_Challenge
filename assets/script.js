@@ -294,3 +294,12 @@ function loseGame() {
 	timeOut.style.display = "block";
 	document.getElementById("timeOutFinalScore").textContent = score;
 }
+
+const scores = JSON.parse(localStorage.getItem("highScore")) || [];
+scores.push(finalScore.textContent);
+scores.sort();
+if (scores.length > 10) {
+	scores.shift();
+}
+
+localStorage.setItem("highScore", JSON.stringify(scores));

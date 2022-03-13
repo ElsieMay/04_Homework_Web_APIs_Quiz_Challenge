@@ -50,6 +50,8 @@ https://www.w3schools.com/jsref/event_onclick.asp
 https://www.w3schools.com/js/js_debugging.asp
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Decrement
 https://codepen.io/boopalan002/pen/yKZVGa
+https://stackoverflow.com/questions/37483144/how-to-store-multiple-items-on-local-storage-when-a-button-is-clicked
+https://www.youtube.com/watch?v=6I3qMe-jXDs
 
 ## License
 
