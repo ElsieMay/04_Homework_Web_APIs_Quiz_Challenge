@@ -249,6 +249,7 @@ function coFunction() {
 	timerCount = timerCount - 10;
 	questionFive.style.display = "none";
 	results.style.display = "block";
+	document.getElementById("finalScore").textContent = score;
 }
 function cuFunction() {
 	qnChoice = "cu";
@@ -259,6 +260,7 @@ function cuFunction() {
 	timerCount = timerCount - 10;
 	questionFive.style.display = "none";
 	results.style.display = "block";
+	document.getElementById("finalScore").textContent = score;
 }
 function quFunction() {
 	qnChoice = "qu";
@@ -268,6 +270,7 @@ function quFunction() {
 	alert("Correct");
 	questionFive.style.display = "none";
 	results.style.display = "block";
+	document.getElementById("finalScore").textContent = score;
 }
 function paFunction() {
 	qnChoice = "par";
@@ -278,4 +281,5 @@ function paFunction() {
 	timerCount = timerCount - 10;
 	questionFive.style.display = "none";
 	results.style.display = "block";
+	document.getElementById("finalScore").textContent = score;
 }

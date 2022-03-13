@@ -44,6 +44,11 @@ I was aided by the BCS Learning assistant. They instructed me well.
 I followed these links for tutorials and additional information;
 
 https://www.youtube.com/watch?v=79WRPIknVHs
+https://www.tutorialsteacher.com/javascript/javascript-string
+https://www.w3schools.com/js/js_popup.asp
+https://www.w3schools.com/jsref/event_onclick.asp
+https://www.w3schools.com/js/js_debugging.asp
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Decrement
 
 ## License
 
