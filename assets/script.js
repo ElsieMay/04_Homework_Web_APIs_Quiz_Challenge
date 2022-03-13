@@ -36,6 +36,8 @@ var terA = document.querySelector("#cubA");
 var forA = document.querySelector("#qutA");
 var conA = document.querySelector("#paraA");
 var scoreN = document.querySelector("scoreN");
+var finalScore = document.querySelector("#finalScore");
+var timeOut = document.querySelector("#timeOut");
 
 let qnChoice = "";
 let score = 0;
@@ -48,6 +50,7 @@ questionThree.style.display = "none";
 questionFour.style.display = "none";
 questionFive.style.display = "none";
 results.style.display = "none";
+timeOut.style.display = "none";
 
 function greeting() {
 	headerText.innerHTML = "";
@@ -70,13 +73,9 @@ function startTimer() {
 	var timer = setInterval(function () {
 		timerCount--;
 		timerElement.textContent = timerCount;
-		if (timerCount > 0) {
-			if (isWin) {
-				winGame();
-			}
-		}
 		if (timerCount === 0) {
 			clearInterval(timer);
+			loseGame();
 		}
 	}, 1000);
 }
@@ -282,4 +281,17 @@ function paFunction() {
 	questionFive.style.display = "none";
 	results.style.display = "block";
 	document.getElementById("finalScore").textContent = score;
+}
+
+function loseGame() {
+	questionOne.style.display = "none";
+	startBtn.style.display = "none";
+	timerElement.style.display = "none";
+	questionTwo.style.display = "none";
+	questionThree.style.display = "none";
+	questionFour.style.display = "none";
+	questionFive.style.display = "none";
+	results.style.display = "none";
+	timeOut.style.display = "block";
+	document.getElementById("timeOutFinalScore").textContent = score;
 }

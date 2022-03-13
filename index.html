@@ -17,7 +17,7 @@
 			<div class="card">
 				<!--This is the card div-->
 				<article>
-					<h2 id="headerText">What is your name?</h2>
+					<h2 id="headerText">What is your name or initials?</h2>
 				</article>
 
 				<div class="card-footer" class id="greetingInput">
@@ -25,7 +25,7 @@
 					<button onclick="greeting()" class="btn">Submit</button>
 					<div class="cardHeader">
 						<!--This is the body font-->
-						<h2>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalise your score by ten seconds!</h2>
+						<h2>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalise your score by ten seconds! Maximum score is 100. Your score will be displayed at the end.</h2>
 					</div>
 				</div>
 				<button id="start">Start</button>
@@ -86,6 +86,11 @@
 			<h1>Score Results</h1>
 			<br />
 			<h2 class="scoreN">Your score is <span id="finalScore"></span></h2>
+		</div>
+		<div id="timeOut">
+			<h1>Score Results</h1>
+			<br />
+			<h2 class="scoreN">Your score is <span id="timeOutFinalScore"></span></h2>
 		</div>
 		<div class="timer-count"><h1 class="timeProperties">60</h1></div>
 		<script src="assets/script.js"></script>
