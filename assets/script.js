@@ -248,6 +248,13 @@ function coFunction() {
 	questionFive.style.display = "none";
 	results.style.display = "block";
 	document.getElementById("finalScore").textContent = score;
+	const scores = JSON.parse(localStorage.getItem("highScore")) || [];
+	scores.push(finalScore.textContent);
+	scores.sort();
+	if (scores.length > 10) {
+		scores.shift();
+	}
+	localStorage.setItem("highScore", JSON.stringify(scores));
 }
 function cuFunction() {
 	qnChoice = "cu";
@@ -259,6 +266,13 @@ function cuFunction() {
 	questionFive.style.display = "none";
 	results.style.display = "block";
 	document.getElementById("finalScore").textContent = score;
+	const scores = JSON.parse(localStorage.getItem("highScore")) || [];
+	scores.push(finalScore.textContent);
+	scores.sort();
+	if (scores.length > 10) {
+		scores.shift();
+	}
+	localStorage.setItem("highScore", JSON.stringify(scores));
 }
 function quFunction() {
 	qnChoice = "qu";
@@ -269,6 +283,13 @@ function quFunction() {
 	questionFive.style.display = "none";
 	results.style.display = "block";
 	document.getElementById("finalScore").textContent = score;
+	const scores = JSON.parse(localStorage.getItem("highScore")) || [];
+	scores.push(finalScore.textContent);
+	scores.sort();
+	if (scores.length > 10) {
+		scores.shift();
+	}
+	localStorage.setItem("highScore", JSON.stringify(scores));
 }
 function paFunction() {
 	qnChoice = "par";
@@ -280,6 +301,13 @@ function paFunction() {
 	questionFive.style.display = "none";
 	results.style.display = "block";
 	document.getElementById("finalScore").textContent = score;
+	const scores = JSON.parse(localStorage.getItem("highScore")) || [];
+	scores.push(finalScore.textContent);
+	scores.sort();
+	if (scores.length > 10) {
+		scores.shift();
+	}
+	localStorage.setItem("highScore", JSON.stringify(scores));
 }
 
 function loseGame() {
@@ -293,13 +321,12 @@ function loseGame() {
 	results.style.display = "none";
 	timeOut.style.display = "block";
 	document.getElementById("timeOutFinalScore").textContent = score;
-}
 
-const scores = JSON.parse(localStorage.getItem("highScore")) || [];
-scores.push(finalScore.textContent);
-scores.sort();
-if (scores.length > 10) {
-	scores.shift();
+	const scores = JSON.parse(localStorage.getItem("highScore")) || [];
+	scores.push(finalScore.textContent);
+	scores.sort();
+	if (scores.length > 10) {
+		scores.shift();
+	}
+	localStorage.setItem("highScore", JSON.stringify(scores));
 }
-
-localStorage.setItem("highScore", JSON.stringify(scores));
