@@ -19,6 +19,24 @@ var strA = document.querySelector("#strA");
 var booA = document.querySelector("#booA");
 var alrA = document.querySelector("#alrA");
 var numA = document.querySelector("#numA");
+var quA = document.querySelector("#quA");
+var curA = document.querySelector("#curA");
+var parA = document.querySelector("#parA");
+var squA = document.querySelector("#squA");
+var javA = document.querySelector("#quA");
+var terA = document.querySelector("#curA");
+var forA = document.querySelector("#parA");
+var conA = document.querySelector("#conA");
+var javA = document.querySelector("#numsA");
+var terA = document.querySelector("#othA");
+var forA = document.querySelector("#bolA");
+var conA = document.querySelector("#allA");
+var javA = document.querySelector("#comA");
+var terA = document.querySelector("#cubA");
+var forA = document.querySelector("#qutA");
+var conA = document.querySelector("#paraA");
+var scoreN = document.querySelector("scoreN");
+
 let qnChoice = "";
 let score = 0;
 
@@ -29,6 +47,7 @@ questionTwo.style.display = "none";
 questionThree.style.display = "none";
 questionFour.style.display = "none";
 questionFive.style.display = "none";
+results.style.display = "none";
 
 function greeting() {
 	headerText.innerHTML = "";
@@ -45,15 +64,6 @@ function startGame() {
 	timerCount = 60;
 	timerElement.textContent = timerCount;
 	startTimer();
-}
-
-function winGame() {
-	console.log("You won");
-	correctCounter + 20;
-}
-
-function loseGame() {
-	console.log("You Lost");
 }
 
 function startTimer() {
@@ -80,6 +90,8 @@ function sFunction() {
 		score = score;
 	}
 	alert("Incorrect");
+	questionOne.style.display = "none";
+	questionTwo.style.display = "block";
 }
 function bFunction() {
 	qnChoice = "b";
@@ -87,6 +99,8 @@ function bFunction() {
 		score = score;
 	}
 	alert("Incorrect");
+	questionOne.style.display = "none";
+	questionTwo.style.display = "block";
 }
 function aFunction() {
 	qnChoice = "a";
@@ -94,6 +108,8 @@ function aFunction() {
 		score += 20;
 	}
 	alert("Correct");
+	questionOne.style.display = "none";
+	questionTwo.style.display = "block";
 }
 function nFunction() {
 	qnChoice = "n";
@@ -101,4 +117,153 @@ function nFunction() {
 		score = score;
 	}
 	alert("Incorrect");
+	questionOne.style.display = "none";
+	questionTwo.style.display = "block";
+}
+
+function qFunction() {
+	qnChoice = "q";
+	if ((sFunction = "q")) {
+		score = score;
+	}
+	alert("Incorrect");
+	questionTwo.style.display = "none";
+	questionThree.style.display = "block";
+}
+function cbFunction() {
+	qnChoice = "c";
+	if ((cbFunction = "c")) {
+		score = score;
+	}
+	alert("Incorrect");
+	questionTwo.style.display = "none";
+	questionThree.style.display = "block";
+}
+function prFunction() {
+	qnChoice = "pa";
+	if ((prFunction = "pa")) {
+		score += 20;
+	}
+	alert("Correct");
+	questionTwo.style.display = "none";
+	questionThree.style.display = "block";
+}
+function sqFunction() {
+	qnChoice = "sq";
+	if ((sqFunction = "sq")) {
+		score = score;
+	}
+	alert("Incorrect");
+	questionTwo.style.display = "none";
+	questionThree.style.display = "block";
+}
+function jFunction() {
+	qnChoice = "j";
+	if ((jFunction = "j")) {
+		score = score;
+	}
+	alert("Incorrect");
+	questionThree.style.display = "none";
+	questionFour.style.display = "block";
+}
+function tFunction() {
+	qnChoice = "t";
+	if ((tFunction = "t")) {
+		score = score;
+	}
+	alert("Incorrect");
+	questionThree.style.display = "none";
+	questionFour.style.display = "block";
+}
+function flFunction() {
+	qnChoice = "fl";
+	if ((flFunction = "fl")) {
+		score = score;
+	}
+	alert("Incorrect");
+	questionThree.style.display = "none";
+	questionFour.style.display = "block";
+}
+function clFunction() {
+	qnChoice = "cl";
+	if ((clFunction = "cl")) {
+		score += 20;
+	}
+	alert("Correct");
+	questionThree.style.display = "none";
+	questionFour.style.display = "block";
+}
+function nsFunction() {
+	qnChoice = "ns";
+	if ((nsFunction = "ns")) {
+		score = score;
+	}
+	alert("Incorrect");
+	questionFour.style.display = "none";
+	questionFive.style.display = "block";
+}
+function oaFunction() {
+	qnChoice = "oa";
+	if ((oaFunction = "oa")) {
+		score = score;
+	}
+	alert("Incorrect");
+	questionFour.style.display = "none";
+	questionFive.style.display = "block";
+}
+function blFunction() {
+	qnChoice = "bl";
+	if ((blFunction = "bl")) {
+		score = score;
+	}
+	alert("Incorrect");
+	questionFour.style.display = "none";
+	questionFive.style.display = "block";
+}
+function allFunction() {
+	qnChoice = "all";
+	if ((allFunction = "all")) {
+		score += 20;
+	}
+	alert("Correct");
+	questionFour.style.display = "none";
+	questionFive.style.display = "block";
+}
+function coFunction() {
+	qnChoice = "co";
+	if ((coFunction = "co")) {
+		score = score;
+	}
+	alert("Incorrect");
+	questionFive.style.display = "none";
+	results.style.display = "block";
+}
+function cuFunction() {
+	qnChoice = "cu";
+	if ((cuFunction = "cu")) {
+		score = score;
+	}
+	alert("Incorrect");
+	questionFive.style.display = "none";
+	results.style.display = "block";
+}
+function quFunction() {
+	qnChoice = "qu";
+	if ((quFunction = "qu")) {
+		score += 20;
+	}
+	alert("Correct");
+	questionFive.style.display = "none";
+	results.style.display = "block";
+}
+function paFunction() {
+	qnChoice = "par";
+	if ((paFunction = "par")) {
+		score = score;
+	}
+	alert("Incorrect");
+	questionFive.style.display = "none";
+	results.style.display = "block";
+	scoreN.style.display = "block";
+	document.write(score);
 }
