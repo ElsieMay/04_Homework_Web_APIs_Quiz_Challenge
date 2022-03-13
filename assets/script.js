@@ -71,13 +71,11 @@ function startTimer() {
 		timerCount--;
 		timerElement.textContent = timerCount;
 		if (timerCount > 0) {
-			if (isWin) {
-				winGame();
+			if (isWin) {}
 			}
 		}
 		if (timerCount === 0) {
 			clearInterval(timer);
-			loseGame();
 		}
 	}, 1000);
 }
@@ -267,3 +265,6 @@ function paFunction() {
 	scoreN.style.display = "block";
 	document.write(score);
 }
+
+localStorage.setItem("score", JSON.stringify([]));
+console.log(JSON.parse(localStorage.getItem("score")));
