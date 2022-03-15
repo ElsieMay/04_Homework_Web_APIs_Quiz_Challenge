@@ -67,17 +67,18 @@ startGame = () => {
 getNewQuestion = () => {
 	if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
 		localStorage.setItem("mostRecentScore", score);
+		//Takes user to High Scores//
 		return window.location.assign("/end.html");
 	}
 	questionCounter++;
 	progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
 	//calculates current question and percentage//
 	progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
-
+	//Randomises questions received by user//
 	const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
 	currentQuestion = availableQuestions[questionsIndex];
 	question.innerText = currentQuestion.question;
-
+	//Loops through question selections//
 	choices.forEach((choice) => {
 		const number = choice.dataset["number"];
 		choice.innerText = currentQuestion["choice" + number];
@@ -87,6 +88,7 @@ getNewQuestion = () => {
 };
 
 choices.forEach((choice) => {
+	//Event listener for answer selection//
 	choice.addEventListener("click", (e) => {
 		if (!acceptingAnswers) return;
 
@@ -96,7 +98,8 @@ choices.forEach((choice) => {
 
 		let classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
 		if (classToApply === "correct") {
-			incrementScore(SCORE_POINTS);
+			score++;
+			scoreText.innerText = score;
 		}
 		selectedChoice.parentElement.classList.add(classToApply);
 		setTimeout(() => {
@@ -105,10 +108,5 @@ choices.forEach((choice) => {
 		}, 1000);
 	});
 });
-
-incrementScore = (num) => {
-	score += num;
-	scoreText.innerText = score;
-};
 
 startGame();
