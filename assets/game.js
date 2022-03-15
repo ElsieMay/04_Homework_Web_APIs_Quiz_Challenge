@@ -108,5 +108,4 @@ choices.forEach((choice) => {
 		}, 1000);
 	});
 });
-
 startGame();
