@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Nova+Square&display=swap");
+* {
+	--Mauve: #46092c;
+	--Citrus: #f5fd7b;
+	--LightMauve: #b35ba4;
+	--Teal: rgb(15, 86, 106);
+}
+
+body {
+	color: var(--Citrus);
+}
+
+.choice-container {
+	display: flex;
+	margin-bottom: 0.8rem;
+	width: 100%;
+	border-radius: 4px;
+	background: var(--Citrus);
+	font-size: 3rem;
+	min-width: 80rem;
+}
+* 
+.choice-container :hover {
+	cursor: pointer;
+	box-shadow: 0 0.4rem 1.4rem 0 var(--Citrus) 0.5;
+	transform: scale(1.02);
+	transform: transform 100ms;
+}
+
+.choice-prefix {
+	padding: 2rem 2.5rem;
+	color: var(--LightMauve);
+}
+
+.choice-text {
+	padding: 2rem;
+	width: 100%;
+}
+
+.correct {
+	background: linear-gradient(32deg, rgb(15, 86, 106) 0% (#f5fd7b) 100%);
+}
+
+.incorrect {
+	background: linear-gradient(32deg, (#f5fd7b) 0% rgb(15, 86, 106) 100%);
+}
+
+#hud {
+	display: flex;
+	justify-content: space-between;
+}
+
+.hud-prefix {
+	text-align: center;
+	font-size: 2rem;
+}
+
+.hud-main-text {
+	text-align: center;
+}
+
+#progressBar {
+	width: 20rem;
+	height: 3rem;
+	border: 0.2rem var(--LightMauve);
+	margin-top: 2rem;
+	border-radius: 50px;
+	overflow: hidden;
+}
+
+#progressBarFull {
+    height: 100%;
+    background: var(--Citrus);
+    width: 0%;
+}
+
+@media screen and (max-width: 768px) {
+	.choice-container {
+		min-width: 40rem;
+	}
+} */
