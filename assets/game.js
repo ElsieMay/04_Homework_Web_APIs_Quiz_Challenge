@@ -3,6 +3,8 @@ const choices = Array.from(document.querySelectorAll(".choice-text"));
 const progressText = document.querySelector("#progressText");
 const scoreText = document.querySelector("#score");
 const progressBarFull = document.querySelector("#progressBarFull");
+var timerElement = document.querySelector(".timer-count");
+var timerCount;
 
 let currentQuestion = {};
 let acceptingAnswers = true;
@@ -18,7 +20,7 @@ let questions = [
 		choice2: "Booleans",
 		choice3: "Alerts",
 		choice4: "Numbers",
-		answer: "Alerts",
+		answer: 3,
 	},
 	{
 		question: "The condition in an if/else statement is enclosed within...",
@@ -26,7 +28,7 @@ let questions = [
 		choice2: "Curly Brackets",
 		choice3: "Parentheses",
 		choice4: "Square Brackets",
-		answer: "Parentheses",
+		answer: 3,
 	},
 	{
 		question: "A very useful tool used during development and debugging for printing content to the debugger is...",
@@ -34,7 +36,7 @@ let questions = [
 		choice2: "Terminal/Bash",
 		choice3: "For Loops",
 		choice4: "Console.Log",
-		answer: "Console.Log",
+		answer: 4,
 	},
 	{
 		question: "Arrays in JavaScript can be used to store...",
@@ -42,7 +44,7 @@ let questions = [
 		choice2: "Other Arrays",
 		choice3: "Booleans",
 		choice4: "All of the Above",
-		answer: "All of the Above",
+		answer: 4,
 	},
 	{
 		question: "String values must be enclosed within_when being assigned to variables.",
@@ -50,7 +52,7 @@ let questions = [
 		choice2: "Curly Brackets",
 		choice3: "Quotes",
 		choice4: "Parentheses",
-		answer: "Quotes",
+		answer: 1,
 	},
 ];
 
@@ -62,12 +64,27 @@ startGame = () => {
 	score = 0;
 	availableQuestions = [...questions];
 	getNewQuestion();
+	timerCount = 60;
+	timerElement.textContent = timerCount;
+	startTimer();
 };
+
+function startTimer() {
+	var timer = setInterval(function () {
+		timerCount--;
+		timerElement.textContent = timerCount;
+		if (timerCount === 0) {
+			clearInterval(timer);
+			//Takes user to End Page//
+			return window.location.assign("/end.html");
+		}
+	}, 1000);
+}
 //Created function to call new question//
 getNewQuestion = () => {
 	if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
 		localStorage.setItem("mostRecentScore", score);
-		//Takes user to High Scores//
+		//Takes user to End Page//
 		return window.location.assign("/end.html");
 	}
 	questionCounter++;
@@ -98,14 +115,21 @@ choices.forEach((choice) => {
 
 		let classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
 		if (classToApply === "correct") {
-			score++;
+			alert("Correct");
+			score + SCORE_POINTS;
 			scoreText.innerText = score;
+		} else {
+			// alert("Incorrect");
+			console.log(selectedAnswer);
+			console.log(currentQuestion.answer);
+			console.log(classToApply);
+			timerCount = timerCount - 10;
+			selectedChoice.parentElement.classList.add(classToApply);
+			setTimeout(() => {
+				selectedChoice.parentElement.classList.remove(classToApply);
+				getNewQuestion();
+			}, 1000);
 		}
-		selectedChoice.parentElement.classList.add(classToApply);
-		setTimeout(() => {
-			selectedChoice.parentElement.classList.remove(classToApply);
-			getNewQuestion();
-		}, 1000);
 	});
 });
 startGame();

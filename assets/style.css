@@ -17,6 +17,7 @@ h1 {
 	font-size: 5.4rem;
 	color: var(--Citrus);
 	margin-bottom: 5rem;
+	padding-top: 50%;
 }
 
 h2 {
@@ -25,8 +26,8 @@ h2 {
 }
 
 .container {
-	width: 100vh;
-	height: 100vh;
+	width: 50vh;
+	height: 50vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -81,6 +82,12 @@ h2 {
 	transform: none;
 }
 
+.buttons {
+	display: flex;
+	position: absolute;
+	flex-direction: column;
+}
+
 #highscore-btn {
 	background: var(--Citrus);
 }
@@ -125,4 +132,11 @@ input::placeholder {
 
 #saveScoreBtn {
 	border: none;
+}
+
+.timer-count {
+	background-color: var(--Citrus);
+	color: var(--Mauve);
+	max-width: 10%;
+	padding: 10px;
 }
