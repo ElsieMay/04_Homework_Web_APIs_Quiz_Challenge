@@ -10,6 +10,7 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
+//Array of questions//
 let questions = [
 	{
 		question: "Commonly used data types do not include...",
@@ -70,6 +71,7 @@ getNewQuestion = () => {
 	}
 	questionCounter++;
 	progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
+	//calculates current question and percentage//
 	progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
 
 	const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
@@ -109,4 +111,4 @@ incrementScore = (num) => {
 	scoreText.innerText = score;
 };
 
-startGame;
+startGame();
