@@ -115,7 +115,7 @@ choices.forEach((choice) => {
 		let classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
 		if (classToApply === "correct") {
 			alert("Correct");
-			score + SCORE_POINTS;
+			score = score + SCORE_POINTS;
 			scoreText.innerText = score;
 			getNewQuestion();
 		} else {
