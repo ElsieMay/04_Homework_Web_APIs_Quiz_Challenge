@@ -1,14 +1,14 @@
-const username = document.querySelector('#username');
-const saveScoreBtn = document.querySelector('#saveScoreBtn');
-const finalScore = document.querySelector('#finalScore');
-const mostRecentScore = localStorage.getItem('mostRecentScore');
+const username = document.querySelector("#username");
+const saveScoreBtn = document.querySelector("#saveScoreBtn");
+const finalScore = document.querySelector("#finalScore");
+const mostRecentScore = localStorage.getItem("mostRecentScore");
 
-const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 const MAX_HIGH_SCORES = 5;
 
 finalScore.innerText = mostRecentScore;
 
-username.addEventListener('keyup', () => {
+username.addEventListener("keyup", () => {
 	saveScoreBtn.disabled = !username.value;
 });
 //allows us to click button without prefault refresh//
@@ -24,8 +24,8 @@ saveHighScore = (e) => {
 	});
 	highScores.splice(5);
 
-	localStorage.setItem('highScores', JSON.stringify(highScores));
-	console.log('hello');
-	window.location.assign('/assets/pages/highScores.html');
-	console.log('hi');
+	localStorage.setItem("highScores", JSON.stringify(highScores));
+	console.log("hello");
+	window.location.assign("/04_Homework_web_apis/assets/pages/end.html");
+	console.log("hi");
 };
