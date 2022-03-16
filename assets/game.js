@@ -6,6 +6,7 @@ const progressBarFull = document.querySelector("#progressBarFull");
 var timerElement = document.querySelector(".timer-count");
 var timerElement = document.querySelector(".timeProperties");
 var timerCount;
+var play = document.querySelector("#play");
 
 let currentQuestion = {};
 let acceptingAnswers = true;
@@ -63,6 +64,7 @@ startGame = () => {
 	questionCounter = 0;
 	score = 0;
 	availableQuestions = [...questions];
+	play.addEventListener("click", window.location.assign("./game.html"));
 	getNewQuestion();
 	timerCount = 60;
 	timerElement.textContent = timerCount;
@@ -76,7 +78,8 @@ function startTimer() {
 		if (timerCount === 0) {
 			clearInterval(timer);
 			//Takes user to End Page//
-			return window.location.assign("./end.html");
+			window.location.assign("./end.html");
+			return;
 		}
 	}, 1000);
 }
