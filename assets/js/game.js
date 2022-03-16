@@ -76,7 +76,7 @@ function startTimer() {
 		if (timerCount === 0) {
 			clearInterval(timer);
 			//Takes user to End Page//
-			return window.location.assign("https://elsiemay.github.io/04_Homework_web_apis/assets/pages/end.html");
+			return window.location.assign("/assets/pages/end.html");
 		}
 	}, 1000);
 }
@@ -85,7 +85,7 @@ getNewQuestion = () => {
 	if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
 		localStorage.setItem("mostRecentScore", score);
 		//Takes user to End Page//
-		window.location.assign("https://elsiemay.github.io/04_Homework_web_apis/assets/pages/end.html");
+		window.location.assign("/assets/pages/end.html");
 		return;
 	} else {
 		questionCounter++;
