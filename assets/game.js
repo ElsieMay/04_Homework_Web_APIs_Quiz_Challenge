@@ -6,7 +6,6 @@ const progressBarFull = document.querySelector("#progressBarFull");
 var timerElement = document.querySelector(".timer-count");
 var timerElement = document.querySelector(".timeProperties");
 var timerCount;
-var play = document.querySelector("#play");
 
 let currentQuestion = {};
 let acceptingAnswers = true;
@@ -64,7 +63,6 @@ startGame = () => {
 	questionCounter = 0;
 	score = 0;
 	availableQuestions = [...questions];
-	play.addEventListener("click", window.location.assign("./game.html"));
 	getNewQuestion();
 	timerCount = 60;
 	timerElement.textContent = timerCount;
@@ -78,8 +76,7 @@ function startTimer() {
 		if (timerCount === 0) {
 			clearInterval(timer);
 			//Takes user to End Page//
-			window.location.assign("./end.html");
-			return;
+			return window.location.assign("./end.html");
 		}
 	}, 1000);
 }
@@ -88,25 +85,23 @@ getNewQuestion = () => {
 	if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
 		localStorage.setItem("mostRecentScore", score);
 		//Takes user to End Page//
-		window.location.assign("./end.html");
-		return;
-	} else {
-		questionCounter++;
-		progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
-		//calculates current question and percentage//
-		progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
-		//Randomises questions received by user//
-		const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
-		currentQuestion = availableQuestions[questionsIndex];
-		question.innerText = currentQuestion.question;
-		//Loops through question selections//
-		choices.forEach((choice) => {
-			const number = choice.dataset["number"];
-			choice.innerText = currentQuestion["choice" + number];
-		});
-		availableQuestions.splice(questionsIndex, 1);
-		acceptingAnswers = true;
+		return window.location.assign("./end.html");
 	}
+	questionCounter++;
+	progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
+	//calculates current question and percentage//
+	progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
+	//Randomises questions received by user//
+	const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
+	currentQuestion = availableQuestions[questionsIndex];
+	question.innerText = currentQuestion.question;
+	//Loops through question selections//
+	choices.forEach((choice) => {
+		const number = choice.dataset["number"];
+		choice.innerText = currentQuestion["choice" + number];
+	});
+	availableQuestions.splice(questionsIndex, 1);
+	acceptingAnswers = true;
 };
 
 choices.forEach((choice) => {
