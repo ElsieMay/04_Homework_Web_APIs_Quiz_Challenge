@@ -26,6 +26,6 @@ saveHighScore = (e) => {
 
 	localStorage.setItem("highScores", JSON.stringify(highScores));
 	console.log("hello");
-	window.location.assign("/04_Homework_web_apis/assets/pages/end.html");
+	window.location.assign("/04_Homework_web_apis/assets/pages/highScores.html");
 	console.log("hi");
 };
