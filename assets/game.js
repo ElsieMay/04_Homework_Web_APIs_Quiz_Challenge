@@ -11,6 +11,8 @@ let acceptingAnswers = true;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
+const SCORE_POINTS = 100;
+const MAX_QUESTIONS = 5;
 
 //Array of questions//
 let questions = [
@@ -55,9 +57,6 @@ let questions = [
 		answer: 1,
 	},
 ];
-
-const SCORE_POINTS = 100;
-const MAX_QUESTIONS = 5;
 
 startGame = () => {
 	questionCounter = 0;
@@ -118,11 +117,9 @@ choices.forEach((choice) => {
 			alert("Correct");
 			score + SCORE_POINTS;
 			scoreText.innerText = score;
+			getNewQuestion();
 		} else {
-			// alert("Incorrect");
-			console.log(selectedAnswer);
-			console.log(currentQuestion.answer);
-			console.log(classToApply);
+			alert("Incorrect");
 			timerCount = timerCount - 10;
 			selectedChoice.parentElement.classList.add(classToApply);
 			setTimeout(() => {
