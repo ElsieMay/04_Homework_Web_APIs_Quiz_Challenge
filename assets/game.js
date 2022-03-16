@@ -15,7 +15,7 @@ let availableQuestions = [];
 const SCORE_POINTS = 100;
 const MAX_QUESTIONS = 5;
 
-//Array of questions//
+//Array of questions and answers//
 let questions = [
 	{
 		question: "Commonly used data types do not include...",
