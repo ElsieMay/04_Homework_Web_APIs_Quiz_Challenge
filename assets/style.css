@@ -13,11 +13,14 @@
 	font-family: "Nova Square", cursive;
 }
 
+body {
+	padding: 10%;
+}
+
 h1 {
-	font-size: 5.4rem;
+	font-size: 3rem;
 	color: var(--Citrus);
 	margin-bottom: 5rem;
-	padding-top: 50%;
 }
 
 h2 {
@@ -84,8 +87,8 @@ h2 {
 
 .buttons {
 	display: flex;
-	position: absolute;
-	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 #highscore-btn {
@@ -135,8 +138,12 @@ input::placeholder {
 }
 
 .timer-count {
-	background-color: var(--Citrus);
+	box-shadow: 0 0.1rem 1.4rem 0 var(--Citrus);
 	color: var(--Mauve);
 	max-width: 10%;
 	padding: 10px;
+	display: flex;
+	float: right;
+	margin-right: 20px;
+	margin-top: 120px;
 }

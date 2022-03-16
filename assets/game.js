@@ -4,6 +4,7 @@ const progressText = document.querySelector("#progressText");
 const scoreText = document.querySelector("#score");
 const progressBarFull = document.querySelector("#progressBarFull");
 var timerElement = document.querySelector(".timer-count");
+var timerElement = document.querySelector(".timeProperties");
 var timerCount;
 
 let currentQuestion = {};
@@ -54,7 +55,7 @@ let questions = [
 		choice2: "Curly Brackets",
 		choice3: "Quotes",
 		choice4: "Parentheses",
-		answer: 1,
+		answer: 3,
 	},
 ];
 
