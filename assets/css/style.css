@@ -152,5 +152,6 @@ input::placeholder {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		flex-flow: row wrap;
 	}
 }
