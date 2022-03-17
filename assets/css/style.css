@@ -147,3 +147,11 @@ input::placeholder {
 	margin-right: 20px;
 	margin-top: 120px;
 }
+@media screen and (max-width: 768px) {
+	.choice-container {
+		min-width: 40rem;
+	}
+	.body {
+		padding-top: 10%;
+	}
+}
