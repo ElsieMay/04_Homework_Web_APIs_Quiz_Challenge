@@ -2,7 +2,7 @@
 
 ## Description
 
-The motivation for this project was to modify code to create an application that can be used to generate random passwords based on criteria selected. The responsive application is run through a user's browser, created using HTML, CSS and Javascript.
+The motivation for this project was to code to create an application that can be used to generate random passwords based on criteria selected. The responsive application is run through a user's browser, created using HTML, CSS and Javascript.
 
 I learnt about code responsive design, creating Javascript code, the console, algorhythms, linking Javascript to HTML and CSS, dynamic HTML and CSS, Javascript hierarchy, Javascript variables and functions, Javascript for loops, arrays and much more.
 
