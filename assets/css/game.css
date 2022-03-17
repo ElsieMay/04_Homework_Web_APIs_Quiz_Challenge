@@ -77,4 +77,7 @@ body {
 	.choice-container {
 		min-width: 40rem;
 	}
+	.body {
+		padding-top: 10%;
+	}
 }
