@@ -9,18 +9,22 @@
 		<link rel="stylesheet" href="../css/game.css" />
 	</head>
 	<body>
+		<!--This is the body/main container content-->
 		<div class="container">
 			<div id="end" class="flex-center flex-column">
 				<h1 id="finalScore">0</h1>
+				<!--This form submits user initials-->
 				<form class="end-form-container">
 					<h2 id="end-text">Enter your initials to view your score</h2>
 					<input type="text" name="name" id="username" placeholder="Enter your initials" />
 					<button class="btn" id="saveScoreBtn" type="submit" onclick="saveHighScore(event)" disabled>Save</button>
 				</form>
+				<!--These are the buttons-->
 				<a href="../pages/game.html" class="btn">Play Again</a>
 				<a href="../../index.html" class="btn">Go Home</a>
 			</div>
 		</div>
+		<!--Links to JavaScipt-->
 		<script src="../js/end.js"></script>
 	</body>
 </html>

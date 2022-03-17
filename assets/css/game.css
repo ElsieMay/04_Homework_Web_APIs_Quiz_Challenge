@@ -1,4 +1,6 @@
+/*This is the google font I have chosen to use*/
 @import url("https://fonts.googleapis.com/css2?family=Nova+Square&display=swap");
+/*These universal properties apply to the whole css*/
 * {
 	--Mauve: #46092c;
 	--Citrus: #f5fd7b;
@@ -6,10 +8,12 @@
 	--Teal: rgb(15, 86, 106);
 }
 
+/*These are the wrapper/body container properties*/
 body {
 	color: var(--Citrus);
 }
 
+/*These are the wrapper/body container properties*/
 .choice-container {
 	display: flex;
 	margin-bottom: 0.8rem;
@@ -19,31 +23,25 @@ body {
 	font-size: 3rem;
 	min-width: 80rem;
 }
+/*These are the wrapper/body container properties when on hover state*/
 .choice-container :hover {
 	cursor: pointer;
 	box-shadow: 0 0.4rem 1.4rem 0 var(--Citrus) 0.5;
 	transform: scale(1.02);
 	transform: transform 100ms;
 }
-
+/*This styles the question selection text*/
 .choice-prefix {
 	padding: 2rem 2.5rem;
 	color: var(--LightMauve);
 }
-
+/*This styles the question selection text*/
 .choice-text {
 	padding: 2rem;
 	width: 100%;
 }
 
-.correct {
-	background: linear-gradient(32deg, rgb(15, 86, 106) 0% (#f5fd7b) 100%);
-}
-
-.incorrect {
-	background: linear-gradient(32deg, (#f5fd7b) 0% rgb(15, 86, 106) 100%);
-}
-
+/*These are the hud properties*/
 #hud {
 	display: flex;
 	justify-content: space-between;
@@ -53,11 +51,11 @@ body {
 	text-align: center;
 	font-size: 2rem;
 }
-
+/*This styles the hud text*/
 .hud-main-text {
 	text-align: center;
 }
-
+/*This styles the progress bar*/
 #progressBar {
 	width: 20rem;
 	height: 3rem;
@@ -66,24 +64,9 @@ body {
 	border-radius: 50px;
 	overflow: hidden;
 }
-
+/*This styles the progress bar*/
 #progressBarFull {
 	height: 100%;
 	background: var(--Citrus);
 	width: 0%;
-}
-
-@media screen and (max-width: 768px) {
-	.justify-center {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		flex-flow: row wrap;
-		flex: 1;
-	}
-	.question {
-		display: flex;
-		flex-direction: column;
-		text-align: center;
-	}
 }

@@ -1,3 +1,4 @@
+//These are a comprehensive list of variables used in below code//
 const question = document.querySelector("#question");
 const choices = Array.from(document.querySelectorAll(".choice-text"));
 const progressText = document.querySelector("#progressText");
@@ -15,7 +16,7 @@ let availableQuestions = [];
 const SCORE_POINTS = 100;
 const MAX_QUESTIONS = 5;
 
-//Array of questions and answers//
+//Array of all quiz questions and answers//
 let questions = [
 	{
 		question: "Commonly used data types do not include...",
@@ -58,12 +59,13 @@ let questions = [
 		answer: 3,
 	},
 ];
-
+//Function starts when user presses play//
 startGame = () => {
 	questionCounter = 0;
 	score = 0;
 	availableQuestions = [...questions];
 	getNewQuestion();
+	//Timer set to 60 seconds//
 	timerCount = 60;
 	timerElement.textContent = timerCount;
 	startTimer();
@@ -73,11 +75,13 @@ function startTimer() {
 	var timer = setInterval(function () {
 		timerCount--;
 		timerElement.textContent = timerCount;
+		//Timer clears when it is at or less than zero//
 		if (timerCount <= 0) {
 			clearInterval(timer);
-			//Takes user to End Page//
+			//Takes user to End Page at end of timer//
 			return window.location.assign("/04_Homework_web_apis/assets/pages/end.html");
 		}
+		//Sets miliseconds//
 	}, 1000);
 }
 //Created function to call new question//
@@ -90,7 +94,7 @@ getNewQuestion = () => {
 	} else {
 		questionCounter++;
 		progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
-		//calculates current question and percentage//
+		//Calculates current question and percentage//
 		progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
 		//Randomises questions received by user//
 		const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
@@ -116,6 +120,7 @@ choices.forEach((choice) => {
 		const selectedAnswer = selectedChoice.dataset["number"];
 
 		let classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+		//If/else statement for user selection//
 		if (classToApply === "correct") {
 			alert("Correct");
 			score = score + SCORE_POINTS;
@@ -132,4 +137,5 @@ choices.forEach((choice) => {
 		}
 	});
 });
+//Calls Start of Game//
 startGame();

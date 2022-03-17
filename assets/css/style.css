@@ -1,5 +1,6 @@
+/*This is the google font I have chosen to use*/
 @import url("https://fonts.googleapis.com/css2?family=Nova+Square&display=swap");
-
+/*These universal properties apply to the whole css*/
 * {
 	--Mauve: #46092c;
 	--Citrus: #f5fd7b;
@@ -12,22 +13,22 @@
 	font-size: 62%;
 	font-family: "Nova Square", cursive;
 }
-
+/*These are the wrapper/body container properties*/
 body {
 	padding: 10%;
 }
-
+/*These are the h1 text properties*/
 h1 {
 	font-size: 3rem;
 	color: var(--Citrus);
 	margin-bottom: 5rem;
 }
-
+/*These are the h2 text properties*/
 h2 {
 	font-size: 4.2 rem;
 	margin-bottom: 4rem;
 }
-
+/*These are the wrapper/body container properties*/
 .container {
 	width: 50vh;
 	height: 50vh;
@@ -38,17 +39,17 @@ h2 {
 	margin: 0 auto;
 	padding: 2rem;
 }
-
+/*These are the flex-column class properties*/
 .flex-column {
 	display: flex;
 	flex-direction: column;
 }
-
+/*These are the flex-center class properties*/
 .flex-center {
 	justify-content: center;
 	align-items: center;
 }
-
+/*These are the justify-center class properties*/
 .justify-center {
 	justify-content: center;
 }
@@ -56,11 +57,11 @@ h2 {
 .text-center {
 	text-align: center;
 }
-
+/*This prevents hidden display content*/
 .hidden {
 	display: none;
 }
-
+/*These are the button properties*/
 .btn {
 	font-size: 2.4rem;
 	padding: 2rem 0;
@@ -72,29 +73,29 @@ h2 {
 	cursor: pointer;
 	box-shadow: 5px 10px 20px var(--LightMauve) inset;
 }
-
+/*These are the button properties when in hover state*/
 .btn:hover {
 	color: var(--Teal);
 	transition: transform 150ms;
 	transform: scale(1.03);
 }
-
+/*These are the button disabled properties when in hover state*/
 .btn[disabled]:hover {
 	cursor: not-allowed;
 	box-shadow: none;
 	transform: none;
 }
-
+/*This applies to all buttons in div*/
 .buttons {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-
+/*This is the contrast colour for the highscore button*/
 #highscore-btn {
 	background: var(--Citrus);
 }
-
+/*This is the contrast colour for the highscore button in hover state*/
 #highscore-btn :hover {
 	box-shadow: 0 0.4rem 1.4rem 0 var(--LightMauve);
 }
@@ -108,7 +109,7 @@ h2 {
 	align-items: center;
 	max-width: 30rem;
 }
-
+/*These are the properties for the form*/
 input {
 	margin-bottom: 1rem;
 	width: 20rem;
@@ -117,26 +118,27 @@ input {
 	border: none;
 	box-shadow: 0 0.1rem 1.4rem 0 var(--Citrus);
 }
-
+/*These are the psuedo class colour properties for the form*/
 input::placeholder {
 	color: var(--Teal);
 }
-
+/*This the id properties for the username*/
 #username {
 	margin-bottom: 3rem;
 	width: 100%;
 	outline: none;
 }
+/*These are the properties for the form input description*/
 #end-text {
 	font-size: 2.4rem;
 	color: var(--LightMauve);
 	text-align: center;
 }
-
+/*This applies to the save button*/
 #saveScoreBtn {
 	border: none;
 }
-
+/*These are the properties for the timer*/
 .timer-count {
 	box-shadow: 0 0.1rem 1.4rem 0 var(--Citrus);
 	color: var(--Mauve);
@@ -147,6 +149,7 @@ input::placeholder {
 	margin-right: 20px;
 	margin-top: 120px;
 }
+/*These apply to smaller screen sizes*/
 @media screen and (max-width: 768px) {
 	.justify-center {
 		display: flex;
