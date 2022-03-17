@@ -15,11 +15,11 @@ I learnt about code responsive design, creating Javascript code, the console, al
 
 ## Installation
 
-The project can be viewed via this link, https://elsiemay.github.io/03_Homework_JavaScript_Password_Generator/index.html. There is no installation required.
+The project can be viewed via this link, https://github.com/ElsieMay/04_Homework_web_apis. There is no installation required.
 
 ## Usage
 
-The deployed application can be viewed via this link, https://elsiemay.github.io/03_Homework_JavaScript_Password_Generator/index.html.
+The deployed application can be viewed via this link, https://github.com/ElsieMay/04_Homework_web_apis.
 
 The Github repository can be viewed via this link, https://github.com/ElsieMay/04_Homework_web_apis.
 
