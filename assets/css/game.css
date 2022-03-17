@@ -81,4 +81,9 @@ body {
 		flex-flow: row wrap;
 		flex: 1;
 	}
+	.question {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
 }

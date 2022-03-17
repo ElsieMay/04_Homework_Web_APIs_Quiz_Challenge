@@ -160,4 +160,9 @@ input::placeholder {
 		flex-direction: column;
 		text-align: center;
 	}
+	.question {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
 }
