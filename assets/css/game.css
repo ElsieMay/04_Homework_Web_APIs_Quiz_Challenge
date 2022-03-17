@@ -75,11 +75,6 @@ body {
 
 @media screen and (max-width: 768px) {
 	.body {
-		/* width: 100%;
-		padding-top: 10%;
-		font-size: 30%; */
 		display: flex;
-		/* justify-content: center;
-		flex-direction: column; */
 	}
 }
