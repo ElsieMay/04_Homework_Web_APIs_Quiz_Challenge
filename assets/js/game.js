@@ -73,7 +73,7 @@ function startTimer() {
 	var timer = setInterval(function () {
 		timerCount--;
 		timerElement.textContent = timerCount;
-		if (timerCount === 0) {
+		if (timerCount <= 0) {
 			clearInterval(timer);
 			//Takes user to End Page//
 			return window.location.assign("/04_Homework_web_apis/assets/pages/end.html");
