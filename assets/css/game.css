@@ -74,10 +74,8 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-	.choice-container {
-		min-width: 40rem;
-	}
 	.body {
+		min-width: 40rem;
 		padding-top: 10%;
 		font-size: 50%;
 		display: flex;

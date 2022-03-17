@@ -148,7 +148,7 @@ input::placeholder {
 	margin-top: 120px;
 }
 @media screen and (max-width: 768px) {
-	.choice-container {
+	.container {
 		min-width: 40rem;
 	}
 	.body {
