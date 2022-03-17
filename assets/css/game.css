@@ -79,5 +79,8 @@ body {
 	}
 	.body {
 		padding-top: 10%;
+		font-size: 50%;
+		display: flex;
+		justify-content: center;
 	}
 }
