@@ -151,21 +151,30 @@ input::placeholder {
 }
 /*These apply to smaller screen sizes*/
 @media screen and (max-width: 768px) {
+	.container {
+		max-width: 80%;
+		flex-wrap: wrap;
+		font-size: 50%;
+	}
+
 	.justify-center {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		flex-flow: row wrap;
 		flex: 1;
+	}
+	#question {
+		font-size: 30px;
+		max-width: 50%;
 	}
 	.questions {
 		display: flex;
 		flex-direction: column;
 		text-align: center;
+		align-items: center;
 	}
-	.question {
+	.timer-count {
 		display: flex;
-		flex-direction: column;
-		text-align: center;
+		position: absolute;
 	}
 }
