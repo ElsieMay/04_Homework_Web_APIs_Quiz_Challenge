@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "assets",
+			"path": "../../../Downloads/04_Homework_web_apis-main/assets"
+		},
+		{
+			"name": "04_Homework_web_apis",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "04_Homework_web_apis"
+	}
+}

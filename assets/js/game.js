@@ -79,7 +79,7 @@ function startTimer() {
 		if (timerCount <= 0) {
 			clearInterval(timer);
 			//Takes user to End Page at end of timer//
-			return window.location.assign("/04_Homework_web_apis/assets/pages/end.html");
+			return window.location.assign("../pages/end.html");
 		}
 		//Sets miliseconds//
 	}, 1000);
@@ -89,7 +89,7 @@ getNewQuestion = () => {
 	if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
 		localStorage.setItem("mostRecentScore", score);
 		//Takes user to End Page//
-		window.location.assign("/04_Homework_web_apis/assets/pages/end.html");
+		window.location.assign("../pages/end.html");
 		return;
 	} else {
 		questionCounter++;

@@ -28,5 +28,5 @@ saveHighScore = (e) => {
 	//The below saves the score result to local storage//
 	localStorage.setItem("highScores", JSON.stringify(highScores));
 	//Assigns high score page location when score is saved//
-	window.location.assign("/04_Homework_web_apis/assets/pages/highScores.html");
+	window.location.assign("../pages/highScores.html");
 };
